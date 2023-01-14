@@ -19,5 +19,8 @@ public class App {
 
         list.remove("C");
         System.out.println("LL: " + list);
+
+        list.add(1, "ZZ");
+        System.out.println("LL: " + list);
     }
 }

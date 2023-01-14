@@ -12,6 +12,21 @@ public class LinkedList<T> {
         head = firstNode;
     }
 
+    public void add(int index, T t) {
+        if (index == 0) {
+            addFirst(t);
+        } else {
+            Node<T> newNode = new Node<>(t);
+
+            Node<T> currentNode = head;
+            for (int i = 0; i < index - 1; i++) {
+                currentNode = currentNode.next;
+            }
+            newNode.next = currentNode.next;
+            currentNode.next = newNode;
+        }
+    }
+
     public void addTail(T t) {
         if (Objects.isNull(head)) {
             head = new Node<>(t);
