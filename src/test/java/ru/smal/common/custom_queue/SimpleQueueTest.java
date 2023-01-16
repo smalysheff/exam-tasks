@@ -7,31 +7,30 @@ import static org.junit.jupiter.api.Assertions.*;
 class SimpleQueueTest {
 
     @Test
-    void add() {
-        SimpleQueue<String> queue = new SimpleQueue<>();
-        queue.add("item");
+    void addAndRemove() {
+        Queue<String> queue = buildQueue();
 
         assertFalse(queue.isEmpty());
-        assertEquals("item", queue.remove());
-    }
-
-    @Test
-    void remove() {
-        SimpleQueue<String> queue = new SimpleQueue<>();
-        queue.add("item");
-
-        assertFalse(queue.isEmpty());
-        assertEquals("item", queue.remove());
+        assertEquals("item1", queue.remove());
+        assertEquals("item2", queue.remove());
         assertTrue(queue.isEmpty());
     }
 
     @Test
     void isEmpty() {
-        SimpleQueue<String> queue = new SimpleQueue<>();
-        queue.add("item");
+        Queue<String> queue = buildQueue();
 
         assertFalse(queue.isEmpty());
         assertTrue(new SimpleQueue<String>().isEmpty());
 
+    }
+
+    private Queue<String> buildQueue() {
+        SimpleQueue<String> queue = new SimpleQueue<>();
+
+        queue.add("item1");
+        queue.add("item2");
+
+        return queue;
     }
 }
