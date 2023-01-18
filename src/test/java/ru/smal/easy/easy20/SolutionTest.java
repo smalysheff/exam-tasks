@@ -16,16 +16,18 @@ class SolutionTest {
     }
 
     @Test
-    void isValid() {
+    void isValidTrue() {
         assertTrue(solution.isValid("()"));
         assertTrue(solution.isValid("([])"));
         assertTrue(solution.isValid("<({[]<>})<>{}>"));
+    }
 
+    @Test
+    void isValidFalse() {
         assertFalse(solution.isValid("("));
         assertFalse(solution.isValid(")"));
         assertFalse(solution.isValid("()["));
         assertFalse(solution.isValid("(]"));
         assertFalse(solution.isValid("(])]"));
     }
-
 }

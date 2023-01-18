@@ -1,6 +1,7 @@
 package ru.smal.easy.easy20;
 
 import java.util.*;
+import java.util.concurrent.LinkedBlockingDeque;
 
 /**
  * Given a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
@@ -26,9 +27,9 @@ import java.util.*;
  */
 public class Solution {
 
-    public boolean isValid(String s) {
-        Stack<Character> stack = new Stack<>();
-        Set<Character> closingBrackets = Set.of(')', '}', ']', '>');
+    public boolean isValid(String word) {
+        Deque<Character> stack = new LinkedBlockingDeque<>();
+        Set<Character> closingBracket = Set.of(')', '}', ']', '>');
         Map<Character, Character> closeBracketToOpenBracket = Map.of(
                 ')', '(',
                 '}', '{',
@@ -36,9 +37,9 @@ public class Solution {
                 '>', '<'
         );
 
-        for(var ch : s.toCharArray() ) {
-            if (closingBrackets.contains(ch)) {
-                if (stack.empty() || stack.peek() != closeBracketToOpenBracket.get(ch)) {
+        for (char ch : word.toCharArray()) {
+            if (closingBracket.contains(ch)) {
+                if (stack.isEmpty() || stack.peek() != closeBracketToOpenBracket.get(ch)) {
                     return false;
                 }
                 stack.pop();
@@ -47,6 +48,6 @@ public class Solution {
             }
         }
 
-        return stack.empty();
+        return stack.isEmpty();
     }
 }
