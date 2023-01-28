@@ -3,9 +3,18 @@ package ru.smal.gof_patterns.structural.proxy.internet_access_example;
 import lombok.Getter;
 import lombok.extern.slf4j.Slf4j;
 
+import java.util.Map;
+
 @Slf4j
 @Getter
 public class RealInternetAccessProxy implements OfficeInternetAccess {
+
+    private static final Map<String, Role> ROLES = Map.of(
+            "Ivan", Role.ADMIN,
+            "Stepan", Role.ADMIN,
+            "Duran", Role.ADMIN,
+            "Dmitry", Role.USER
+    );
 
     private OfficeInternetAccess realInternetAccess;
     private final String employeeName;
@@ -29,14 +38,6 @@ public class RealInternetAccessProxy implements OfficeInternetAccess {
         if (employeeName == null) {
             return Role.USER;
         }
-        //Replace with command pattern
-        return switch (employeeName) {
-            case "Ivan", "Stepan", "Duran" -> Role.ADMIN;
-            default -> Role.USER;
-        };
-    }
-
-    enum Role {
-        ADMIN, USER
+        return ROLES.get(employeeName);
     }
 }

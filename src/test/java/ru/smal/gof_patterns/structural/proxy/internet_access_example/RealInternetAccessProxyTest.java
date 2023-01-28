@@ -29,8 +29,12 @@ class RealInternetAccessProxyTest {
         RealInternetAccessProxy fake = new RealInternetAccessProxy("fake");
         fake.grantInternetAccess();
 
+        RealInternetAccessProxy dmitry = new RealInternetAccessProxy("dmitry");
+        fake.grantInternetAccess();
+
         Assertions.assertThat(nullName.getRealInternetAccess()).isNull();
         Assertions.assertThat(fake.getRealInternetAccess()).isNull();
+        Assertions.assertThat(dmitry.getRealInternetAccess()).isNull();
 
     }
 }
