@@ -25,12 +25,16 @@ package ru.smal.easy.easy136;
  */
 public class Solution {
 
+    /**
+     * Solution via XOR
+     * @param nums array
+     * @return single number
+     */
     public int singleNumber(int[] nums) {
         int buffer = 0;
         for (int num : nums) {
             buffer ^= num;
         }
-
         return buffer;
     }
 }
