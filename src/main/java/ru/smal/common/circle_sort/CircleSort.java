@@ -1,5 +1,8 @@
 package ru.smal.common.circle_sort;
 
+/**
+ * Circle sort algorithm
+ */
 public class CircleSort {
 
     public int[] circleSort(int[] nums) {
@@ -21,5 +24,3 @@ public class CircleSort {
         nums[second] = temp;
     }
 }
-
-// [4, 3, 5, 2, 1]

@@ -22,6 +22,7 @@ import java.util.List;
  */
 public class Solution {
     public List<Integer> findDisappearedNumbers(int[] nums) {
+        // circle sort algorithm
         int i = 0;
         while (i < nums.length) {
             int pos = nums[i] - 1; // correct position
