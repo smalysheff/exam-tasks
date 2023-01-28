@@ -1,0 +1,3 @@
+# exam-tasks
+## GOF PATTERNS
+## LEETCODE EXAMPLE
