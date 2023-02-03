@@ -1,4 +1,4 @@
-package ru.smal.common.stream_api.common;
+package ru.smal.common.core.stream_api.common;
 
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;

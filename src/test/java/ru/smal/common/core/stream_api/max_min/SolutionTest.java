@@ -1,4 +1,4 @@
-package ru.smal.common.stream_api.max_min;
+package ru.smal.common.core.stream_api.max_min;
 
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
@@ -6,7 +6,6 @@ import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;
 import java.util.Collections;
-import java.util.Comparator;
 import java.util.List;
 
 class SolutionTest {

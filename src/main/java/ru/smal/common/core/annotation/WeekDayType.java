@@ -1,4 +1,4 @@
-package ru.smal.common.annotation;
+package ru.smal.common.core.annotation;
 
 public enum WeekDayType {
 

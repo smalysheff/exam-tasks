@@ -1,7 +1,11 @@
-package ru.smal.common.annotation;
+package ru.smal.common.core.annotation;
 
 import static org.assertj.core.api.Assertions.*;
 import org.junit.jupiter.api.Test;
+import ru.smal.common.core.annotation.ClassAnnotation;
+import ru.smal.common.core.annotation.MethodAnnotation;
+import ru.smal.common.core.annotation.SomeAnnotationClass;
+import ru.smal.common.core.annotation.WeekDayType;
 
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Method;

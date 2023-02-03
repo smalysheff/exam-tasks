@@ -1,8 +1,9 @@
-package ru.smal.common.stream_api.convert;
+package ru.smal.common.core.stream_api.convert;
 
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import ru.smal.common.core.stream_api.convert.ConvertArrayToList;
 
 import java.util.List;
 
