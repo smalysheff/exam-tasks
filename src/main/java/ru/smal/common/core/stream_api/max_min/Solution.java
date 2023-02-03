@@ -1,4 +1,4 @@
-package ru.smal.common.stream_api.max_min;
+package ru.smal.common.core.stream_api.max_min;
 
 import java.time.LocalDate;
 import java.util.Comparator;

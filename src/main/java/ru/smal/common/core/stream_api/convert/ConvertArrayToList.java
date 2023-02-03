@@ -1,4 +1,4 @@
-package ru.smal.common.stream_api.convert;
+package ru.smal.common.core.stream_api.convert;
 
 import java.util.ArrayList;
 import java.util.Arrays;

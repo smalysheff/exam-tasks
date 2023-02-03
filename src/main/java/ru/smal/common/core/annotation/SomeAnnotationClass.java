@@ -1,4 +1,4 @@
-package ru.smal.common.annotation;
+package ru.smal.common.core.annotation;
 
 @ClassAnnotation(WeekDayType.MONDAY)
 public class SomeAnnotationClass {
