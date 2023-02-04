@@ -3,7 +3,9 @@ package ru.smal.common.core.stream_api.convert;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 import java.util.stream.IntStream;
+import java.util.stream.Stream;
 
 public class ConvertArrayToList {
 
@@ -12,6 +14,7 @@ public class ConvertArrayToList {
     }
 
     public List<Integer> convertUseIntStream(int[] nums) {
+        Stream.of(1, 2, 3).toList();
         return IntStream.of(nums).boxed().toList();
     }
 
