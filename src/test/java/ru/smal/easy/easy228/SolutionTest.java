@@ -13,7 +13,7 @@ class SolutionTest {
     private Solution solution;
 
     @BeforeEach
-    void blabls() {
+    void setUp() {
         solution = new Solution();
     }
     @Test
