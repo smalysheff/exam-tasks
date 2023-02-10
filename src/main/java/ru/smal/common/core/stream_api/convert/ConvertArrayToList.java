@@ -14,7 +14,6 @@ public class ConvertArrayToList {
     }
 
     public List<Integer> convertUseIntStream(int[] nums) {
-        Stream.of(1, 2, 3).toList();
         return IntStream.of(nums).boxed().toList();
     }
 

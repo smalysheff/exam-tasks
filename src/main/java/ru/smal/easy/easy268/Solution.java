@@ -1,6 +1,7 @@
 package ru.smal.easy.easy268;
 
 import java.util.Arrays;
+import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 /**
@@ -34,14 +35,13 @@ public class Solution {
     }
 
     public int missingNumber(int[] nums) {
-        int full = Stream
+        int full = IntStream
                 .iterate(0, i -> i + 1)
                 .limit(nums.length + 1)
-                .mapToInt(Integer::intValue)
                 .sum();
 
-        int sum = Arrays
-                .stream(nums)
+        int sum = IntStream
+                .of(nums)
                 .sum();
 
         return full - sum;
