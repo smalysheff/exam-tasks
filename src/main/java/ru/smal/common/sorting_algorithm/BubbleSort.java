@@ -1,41 +1,48 @@
 package ru.smal.common.sorting_algorithm;
 
-import lombok.extern.slf4j.Slf4j;
-
-@Slf4j
 public class BubbleSort {
 
-    public int[] bubbleSortWhileLoop(int[] arr) {
-        boolean stop;
-        int count = 0;
+    public int[] bubbleSortDoWhileLoop(int[] nums) {
+        boolean swapped;
         do {
-            stop = false;
-            for (int i = 0; i < arr.length - 1; i++) {
-                if (arr[i] > arr[i + 1]) {
-                    stop = true;
-                    swap(arr, i, i + 1);
+            swapped = false;
+            for (int i = 0; i < nums.length - 1; i++) {
+                if (nums[i] > nums[i + 1]) {
+                    swapped = true;
+                    swap(nums, i, i + 1);
                 }
-                count++;
             }
-        } while (stop);
+        } while (swapped);
 
-        log.info("Количество циклов: [{}]", count);
-        return arr;
+        return nums;
     }
 
-    public int[] bubbleSortForLoop(int[] arr) {
-        int count = 0;
-        for (int i = 0; i < arr.length; i++) {
-            for (int j = i; j < arr.length - 1; j++) {
-                if (arr[i] > arr[j + 1]) {
-                    swap(arr, i, j + 1);
+    public int[] bubbleSortWhileLoop(int[] nums) {
+        boolean swapped = true;
+
+        while (swapped) {
+            swapped = false;
+            for (int i = 0; i < nums.length - 1; i++) {
+                if (nums[i] > nums[i + 1]) {
+                    swap(nums, i, i + 1);
+                    swapped = true;
                 }
-                count++;
             }
         }
 
-        log.info("Количество циклов: [{}]", count);
-        return arr;
+        return nums;
+    }
+
+    public int[] bubbleSortForLoop(int[] nums) {
+        for (int i = 0; i < nums.length; i++) {
+            for (int j = i; j < nums.length - 1; j++) {
+                if (nums[i] > nums[j + 1]) {
+                    swap(nums, i, j + 1);
+                }
+            }
+        }
+
+        return nums;
     }
 
     private void swap(int[] arr, int i, int j) {

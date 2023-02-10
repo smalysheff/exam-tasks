@@ -1,8 +1,11 @@
 package ru.smal.easy.easy268;
 
+import java.util.Arrays;
+import java.util.stream.Stream;
+
 /**
  * 268. Missing Number
- *
+ * <p>
  * Given an array nums containing n distinct numbers in the range [0, n], return the only number in the range that is missing from the array.
  * <p>
  * Example 1:
@@ -22,11 +25,25 @@ package ru.smal.easy.easy268;
  */
 public class Solution {
 
-    public int missingNumber(int[] nums) {
+    public int missingNumberXor(int[] nums) {
         int ans = nums.length;
         for (int i = 0; i < nums.length; i++) {
             ans ^= i ^ nums[i];
         }
         return ans;
+    }
+
+    public int missingNumber(int[] nums) {
+        int full = Stream
+                .iterate(0, i -> i + 1)
+                .limit(nums.length + 1)
+                .mapToInt(Integer::intValue)
+                .sum();
+
+        int sum = Arrays
+                .stream(nums)
+                .sum();
+
+        return full - sum;
     }
 }

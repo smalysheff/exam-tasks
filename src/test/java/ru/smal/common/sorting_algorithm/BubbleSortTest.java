@@ -14,6 +14,12 @@ class BubbleSortTest {
     }
 
     @Test
+    void bubbleSortDoWhileLoop() {
+        int[] actual = bubbleSort.bubbleSortDoWhileLoop(buildArray());
+        check(actual);
+    }
+
+    @Test
     void bubbleSortWhileLoop() {
         int[] actual = bubbleSort.bubbleSortWhileLoop(buildArray());
         check(actual);
