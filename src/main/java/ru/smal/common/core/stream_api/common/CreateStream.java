@@ -5,6 +5,7 @@ import lombok.SneakyThrows;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.Arrays;
+import java.util.List;
 import java.util.Random;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
@@ -20,6 +21,9 @@ import java.util.stream.Stream;
  * peek()
  * limit()
  * skip()
+ * generate()
+ * iterate()
+ * limit()
  * <p>
  * <p>
  * =========== Terminal Operations ===========
@@ -32,6 +36,7 @@ import java.util.stream.Stream;
  * min()
  * max()
  * count()
+ * sum()
  * anyMatch()
  * allMatch()
  * noneMatch()
@@ -41,6 +46,8 @@ import java.util.stream.Stream;
 public class CreateStream {
     @SneakyThrows
     public void createStreams() {
+
+        var collectionsStream = List.of("one", "two", "three").stream();
 
         var empty = Stream.empty();
 
