@@ -3,7 +3,6 @@ package ru.smal.common.core.stream_api.reduce;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
-import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
 public class Solution {
