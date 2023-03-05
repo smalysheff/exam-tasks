@@ -2,6 +2,9 @@ package ru.smal.gof_patterns.creational.builder;
 
 import lombok.Getter;
 
+/**
+ * A immutable object
+ */
 @Getter
 public class Employee {
 
