@@ -17,7 +17,7 @@ class NotificationFactoryTest {
     @Test
     void smsNotificationTest() {
         notificationFactory = new SmsNotificationFactory();
-        Notification notification = notificationFactory.createNotification();
+        Notification notification = notificationFactory.createNotificationAndSend();
 
         assertEquals("send sms notification", notification.send());
     }
@@ -25,7 +25,7 @@ class NotificationFactoryTest {
     @Test
     void emailNotificationTest() {
         notificationFactory = new EmailNotificationFactory();
-        Notification notification = notificationFactory.createNotification();
+        Notification notification = notificationFactory.createNotificationAndSend();
 
         assertEquals("send email notification", notification.send());
     }
