@@ -1,8 +1,6 @@
 package ru.smal.common.test_example;
 
-import java.util.Arrays;
-
-public class Main {
+public class Application {
     public static void main(String[] args) {
 
     }
