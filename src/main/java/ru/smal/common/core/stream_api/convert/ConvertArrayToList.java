@@ -10,11 +10,15 @@ import java.util.stream.Stream;
 public class ConvertArrayToList {
 
     public List<Integer> convertUseStream(int[] nums) {
-        return Arrays.stream(nums).boxed().toList();
+        return Arrays.stream(nums)
+                .boxed()
+                .toList();
     }
 
     public List<Integer> convertUseIntStream(int[] nums) {
-        return IntStream.of(nums).boxed().toList();
+        return IntStream.of(nums)
+                .boxed()
+                .toList();
     }
 
     public List<Integer> convertUseForLoop(int[] nums) {
