@@ -47,6 +47,13 @@
             <artifactId>logback-classic</artifactId>
             <version>1.4.5</version>
         </dependency>
+
+        <!--Reflections lib-->
+        <dependency>
+            <groupId>org.reflections</groupId>
+            <artifactId>reflections</artifactId>
+            <version>0.10.2</version>
+        </dependency>
     </dependencies>
 
 </project>
