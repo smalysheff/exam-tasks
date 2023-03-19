@@ -3,6 +3,7 @@ package ru.smal.book_solving_problem.chapter1;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import java.util.List;
 import java.util.Map;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -28,6 +29,30 @@ class Solution1Test {
     void countDuplicateCharactersUseStreamTest() {
         Map<Character, Long> expected = buildCharacterLongMap();
         Map<Character, Long> actual = solution.countDuplicateCharactersUseStream("java developer");
+
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    void calculateRepeatsUseStream() {
+        Map<Integer, Long> expected = Map.of(1, 2L, 2, 3L, 3, 1L);
+        Map<Integer, Long> actual = solution.calculateRepeatsUseStream(List.of(1, 1, 2, 2, 2, 3));
+
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    void calculateRepeatsUseForLoop() {
+        Map<Integer, Integer> expected = Map.of(1, 2, 2, 3, 3, 1);
+        Map<Integer, Integer> actual = solution.calculateRepeatsUseForLoop(List.of(1, 1, 2, 2, 2, 3));
+
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    void calculateRepeatsUseCompute() {
+        Map<Integer, Integer> expected = Map.of(1, 2, 2, 3, 3, 1);
+        Map<Integer, Integer> actual = solution.calculateRepeatsUseCompute(List.of(1, 1, 2, 2, 2, 3));
 
         assertEquals(expected, actual);
     }

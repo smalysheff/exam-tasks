@@ -2,7 +2,6 @@ package ru.smal.book_solving_problem.chapter1;
 
 import java.util.Map;
 import java.util.Set;
-import java.util.stream.Collectors;
 
 import static java.util.stream.Collectors.counting;
 import static java.util.stream.Collectors.partitioningBy;
