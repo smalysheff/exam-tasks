@@ -2,7 +2,6 @@ package ru.smal.book_solving_problem.chapter1;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
-import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import static java.util.function.Function.identity;

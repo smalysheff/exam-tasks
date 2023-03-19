@@ -1,4 +1,4 @@
-package ru.smal.easy.easy448;
+package ru.smal.leetcode.easy.easy448;
 
 import java.util.ArrayList;
 import java.util.List;

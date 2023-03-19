@@ -1,4 +1,4 @@
-package ru.smal.easy.easy20;
+package ru.smal.leetcode.easy.easy20;
 
 import java.util.*;
 import java.util.concurrent.LinkedBlockingDeque;

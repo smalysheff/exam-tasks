@@ -1,8 +1,9 @@
-package ru.smal.easy.easy448;
+package ru.smal.leetcode.easy.easy448;
 
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import ru.smal.leetcode.easy.easy448.Solution;
 
 import java.util.List;
 

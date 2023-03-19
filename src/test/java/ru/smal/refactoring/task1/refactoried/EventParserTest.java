@@ -1,9 +1,7 @@
-package ru.smal.refactoring.refactoried;
+package ru.smal.refactoring.task1.refactoried;
 
 import org.junit.jupiter.api.Test;
-import org.junit.platform.commons.util.ReflectionUtils;
-
-import static org.junit.jupiter.api.Assertions.*;
+import ru.smal.refactoring.task1.refactoried.EventParser;
 
 class EventParserTest {
 

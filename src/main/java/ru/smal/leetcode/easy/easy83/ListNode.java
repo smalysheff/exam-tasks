@@ -1,4 +1,4 @@
-package ru.smal.easy.easy83;
+package ru.smal.leetcode.easy.easy83;
 
 public class ListNode {
     public int val;

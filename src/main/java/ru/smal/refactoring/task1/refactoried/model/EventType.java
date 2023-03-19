@@ -1,4 +1,4 @@
-package ru.smal.refactoring.refactoried.model;
+package ru.smal.refactoring.task1.refactoried.model;
 
 public enum EventType {
 

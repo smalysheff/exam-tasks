@@ -1,8 +1,6 @@
-package ru.smal.easy.easy268;
+package ru.smal.leetcode.easy.easy268;
 
-import java.util.Arrays;
 import java.util.stream.IntStream;
-import java.util.stream.Stream;
 
 /**
  * 268. Missing Number

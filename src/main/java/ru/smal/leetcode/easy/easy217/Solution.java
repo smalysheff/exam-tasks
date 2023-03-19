@@ -1,4 +1,4 @@
-package ru.smal.easy.easy217;
+package ru.smal.leetcode.easy.easy217;
 
 import java.util.HashSet;
 import java.util.Set;

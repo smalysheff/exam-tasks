@@ -1,4 +1,4 @@
-package ru.smal.easy.easy58;
+package ru.smal.leetcode.easy.easy58;
 
 /**
  * 58. Length of Last Word

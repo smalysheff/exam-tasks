@@ -3,32 +3,31 @@ package ru.smal.gof_patterns.behavioral.strategy;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
-import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @ExtendWith(MockitoExtension.class)
-class ContextTest {
+class MathServiceTest {
 
     @InjectMocks
-    private Context context;
+    private MathService mathService;
 
     @Test
     void getStrategyAdd() {
-        context.setStrategy(new MathAddStrategy());
-        assertEquals(9, context.getStrategy(4, 5));
+        mathService.setStrategy(new MathAddStrategy());
+        assertEquals(9, mathService.calculate(4, 5));
     }
 
     @Test
     void getStrategyMulti() {
-        context.setStrategy(new MathMultiStrategy());
-        assertEquals(20, context.getStrategy(4, 5));
+        mathService.setStrategy(new MathMultiStrategy());
+        assertEquals(20, mathService.calculate(4, 5));
     }
 
     @Test
     void getStrategySub() {
-        context.setStrategy(new MathSubStrategy());
-        assertEquals(-1, context.getStrategy(4, 5));
+        mathService.setStrategy(new MathSubStrategy());
+        assertEquals(-1, mathService.calculate(4, 5));
     }
 }

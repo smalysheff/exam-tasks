@@ -1,13 +1,11 @@
-package ru.smal.refactoring.refactoried.parser;
+package ru.smal.refactoring.task1.refactoried.parser;
 
-import ru.smal.refactoring.refactoried.model.EventType;
-
-import static ru.smal.refactoring.refactoried.model.EventType.ONE_MORE_EVENT;
+import ru.smal.refactoring.task1.refactoried.model.EventType;
 
 public class OneMoreEventParser implements IEventParser {
     @Override
     public EventType getEventType() {
-        return ONE_MORE_EVENT;
+        return EventType.ONE_MORE_EVENT;
     }
 
     @Override

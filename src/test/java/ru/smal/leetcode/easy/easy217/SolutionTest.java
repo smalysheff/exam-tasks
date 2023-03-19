@@ -1,7 +1,8 @@
-package ru.smal.easy.easy217;
+package ru.smal.leetcode.easy.easy217;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import ru.smal.leetcode.easy.easy217.Solution;
 
 import static org.junit.jupiter.api.Assertions.*;
 
