@@ -1,7 +1,9 @@
-package ru.smal.easy.easy21;
+package ru.smal.leetcode.easy.easy21;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import ru.smal.leetcode.easy.easy21.ListNode;
+import ru.smal.leetcode.easy.easy21.Solution;
 
 import java.util.Objects;
 

@@ -1,8 +1,8 @@
-package ru.smal.refactoring.refactoried.parser;
+package ru.smal.refactoring.task1.refactoried.parser;
 
-import ru.smal.refactoring.refactoried.model.EventType;
+import ru.smal.refactoring.task1.refactoried.model.EventType;
 
-import static ru.smal.refactoring.refactoried.model.EventType.SOME_EVENT;
+import static ru.smal.refactoring.task1.refactoried.model.EventType.SOME_EVENT;
 
 public class SomeEventParser implements IEventParser {
     @Override

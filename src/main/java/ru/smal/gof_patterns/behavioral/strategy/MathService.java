@@ -1,16 +1,16 @@
 package ru.smal.gof_patterns.behavioral.strategy;
 
-public class Context {
+public class MathService {
 
     private MathStrategy strategy;
 
-    public Context() {}
+    public MathService() {}
 
-    public Context(MathStrategy strategy) {
+    public MathService(MathStrategy strategy) {
         this.strategy = strategy;
     }
 
-    public double getStrategy(int a, int b) {
+    public double calculate(int a, int b) {
         return strategy.execute(a, b);
     }
 

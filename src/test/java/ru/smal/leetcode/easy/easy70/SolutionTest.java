@@ -1,9 +1,10 @@
-package ru.smal.easy.easy70;
+package ru.smal.leetcode.easy.easy70;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.junit.jupiter.MockitoExtension;
+import ru.smal.leetcode.easy.easy70.Solution;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 

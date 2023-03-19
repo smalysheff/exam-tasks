@@ -1,8 +1,9 @@
-package ru.smal.easy.easy136;
+package ru.smal.leetcode.easy.easy136;
 
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import ru.smal.leetcode.easy.easy136.Solution;
 
 class SolutionTest {
 

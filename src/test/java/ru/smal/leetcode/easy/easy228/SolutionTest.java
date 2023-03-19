@@ -1,12 +1,11 @@
-package ru.smal.easy.easy228;
+package ru.smal.leetcode.easy.easy228;
 
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import ru.smal.leetcode.easy.easy228.Solution;
 
 import java.util.List;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class SolutionTest {
 

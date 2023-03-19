@@ -1,6 +1,6 @@
-package ru.smal.refactoring.refactoried.parser;
+package ru.smal.refactoring.task1.refactoried.parser;
 
-import ru.smal.refactoring.refactoried.model.EventType;
+import ru.smal.refactoring.task1.refactoried.model.EventType;
 
 public interface IEventParser {
 

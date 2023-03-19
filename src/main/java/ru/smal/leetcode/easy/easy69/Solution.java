@@ -1,4 +1,4 @@
-package ru.smal.easy.easy69;
+package ru.smal.leetcode.easy.easy69;
 
 
 /**

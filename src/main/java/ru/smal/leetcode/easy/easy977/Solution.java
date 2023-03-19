@@ -1,4 +1,4 @@
-package ru.smal.easy.easy977;
+package ru.smal.leetcode.easy.easy977;
 
 import java.util.*;
 import java.util.stream.IntStream;

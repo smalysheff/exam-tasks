@@ -1,4 +1,7 @@
-package ru.smal.book_solving_problem;
+package ru.smal.book_solving_problem.chapter1;
+
+import java.util.regex.Pattern;
+import java.util.stream.Collectors;
 
 /**
  * Инвертирование букв и слов.
@@ -7,27 +10,47 @@ package ru.smal.book_solving_problem;
  */
 public class Solution3 {
 
-    public static final String WHITE_SPASE = " ";
+    public static final String WHITESPACE = " ";
+    public static final Pattern PATTERN = Pattern.compile(" +");
 
-    public String reverseChars(String text) {
-        String[] split = text.split(WHITE_SPASE);
+    public String reverseWordsFromBook(String str) {
+        String[] words = str.split(WHITESPACE);
 
-        StringBuilder reverseWords = new StringBuilder();
+        StringBuilder reverseString = new StringBuilder();
+
+        for (String word : words) {
+            StringBuilder reverseWord = new StringBuilder();
+
+            for (int i = word.length() - 1; i >= 0; i--) {
+                reverseWord.append(word.charAt(i));
+            }
+            reverseString.append(reverseWord).append(WHITESPACE);
+        }
+        return reverseString.toString().trim();
+    }
+
+    public String reverseWords(String text) {
+        String[] split = text.split(WHITESPACE);
+
+        StringBuilder reverseString = new StringBuilder();
 
         for (String str : split) {
-            reverseWords
+            reverseString
                     .append(reverse(str))
-                    .append(WHITE_SPASE);
+                    .append(WHITESPACE);
         }
 
-        return reverseWords.toString().trim();
+        return reverseString.toString().trim();
     }
 
-    public String reverseCharsAndWord(String text) {
-        return new StringBuilder(text).reverse().toString();
-    }
-
-    private StringBuilder reverse(String text) {
+    private static StringBuilder reverse(String text) {
         return new StringBuilder(text).reverse();
+    }
+
+    public String reverseWordsUseStream(String text) {
+        return PATTERN.splitAsStream(text)
+                .map(StringBuilder::new)
+                .map(StringBuilder::reverse)
+                .collect(Collectors.joining(" "));
     }
 }

@@ -1,4 +1,4 @@
-package ru.smal.easy.easy70;
+package ru.smal.leetcode.easy.easy70;
 
 /**
  * 70. Climbing Stairs

@@ -1,4 +1,4 @@
-package ru.smal.easy.easy136;
+package ru.smal.leetcode.easy.easy136;
 
 /**
  * 136. Single Number

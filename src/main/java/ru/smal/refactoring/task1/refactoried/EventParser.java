@@ -1,19 +1,12 @@
-package ru.smal.refactoring.refactoried;
+package ru.smal.refactoring.task1.refactoried;
 
 import lombok.SneakyThrows;
 import org.reflections.Reflections;
-import ru.smal.refactoring.refactoried.model.Event;
-import ru.smal.refactoring.refactoried.model.EventType;
-import ru.smal.refactoring.refactoried.parser.IEventParser;
-import ru.smal.refactoring.refactoried.parser.OneMoreEventParser;
-import ru.smal.refactoring.refactoried.parser.SomeEventParser;
-import ru.smal.refactoring.refactoried.parser.SomeOtherEventParser;
+import ru.smal.refactoring.task1.refactoried.model.Event;
+import ru.smal.refactoring.task1.refactoried.model.EventType;
+import ru.smal.refactoring.task1.refactoried.parser.IEventParser;
 
-import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.ReflectPermission;
 import java.util.*;
-
-import static ru.smal.refactoring.refactoried.model.EventType.*;
 
 public class EventParser {
 

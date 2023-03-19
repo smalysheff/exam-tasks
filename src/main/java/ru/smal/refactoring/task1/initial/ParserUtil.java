@@ -1,4 +1,4 @@
-package ru.smal.refactoring.initial;
+package ru.smal.refactoring.task1.initial;
 
 public class ParserUtil {
     private ParserUtil() {
