@@ -1,4 +1,4 @@
-package ru.smal.common.circle_sort;
+package ru.smal.common.sorting_algorithm;
 
 /**
  * Circle sort algorithm

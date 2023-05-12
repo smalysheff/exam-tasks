@@ -1,6 +1,8 @@
 package ru.smal.common.custom_queue;
 
 import org.junit.jupiter.api.Test;
+import ru.smal.common.custom_collection.custom_queue.Queue;
+import ru.smal.common.custom_collection.custom_queue.SimpleQueue;
 
 import static org.junit.jupiter.api.Assertions.*;
 

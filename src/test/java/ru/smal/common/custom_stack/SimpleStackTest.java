@@ -1,6 +1,8 @@
 package ru.smal.common.custom_stack;
 
 import org.junit.jupiter.api.Test;
+import ru.smal.common.custom_collection.custom_stack.SimpleStack;
+import ru.smal.common.custom_collection.custom_stack.Stack;
 
 import java.util.EmptyStackException;
 

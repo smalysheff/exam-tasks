@@ -3,6 +3,7 @@ package ru.smal.common.circle_sort;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import ru.smal.common.sorting_algorithm.CircleSort;
 
 class CircleSortTest {
 
