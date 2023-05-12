@@ -31,6 +31,12 @@ public class FunctionalInterfaces<T, U, R> {
 
         }
     };
+    BiConsumer<T, U> biConsumer = new BiConsumer<T, U>() {
+        @Override
+        public void accept(T t, U u) {
+
+        }
+    };
     Function<T, R> function = new Function<T, R>() {
         @Override
         public R apply(T s) {

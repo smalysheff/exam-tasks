@@ -1,4 +1,4 @@
-package ru.smal.common.custom_stack;
+package ru.smal.common.custom_collection.custom_stack;
 
 import java.util.ArrayList;
 import java.util.EmptyStackException;

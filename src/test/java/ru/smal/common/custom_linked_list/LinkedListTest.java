@@ -1,6 +1,7 @@
 package ru.smal.common.custom_linked_list;
 
 import org.junit.jupiter.api.Test;
+import ru.smal.common.custom_collection.custom_linked_list.LinkedList;
 
 class LinkedListTest {
 

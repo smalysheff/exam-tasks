@@ -1,4 +1,4 @@
-package ru.smal.common.custom_linked_list;
+package ru.smal.common.custom_collection.custom_linked_list;
 
 import java.util.Objects;
 

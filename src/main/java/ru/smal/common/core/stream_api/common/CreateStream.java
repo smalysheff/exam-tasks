@@ -7,6 +7,8 @@ import java.nio.file.Path;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
+import java.util.function.BinaryOperator;
+import java.util.function.IntFunction;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
@@ -23,7 +25,6 @@ import java.util.stream.Stream;
  * skip()
  * generate()
  * iterate()
- * limit()
  * <p>
  * <p>
  * =========== Terminal Operations ===========
@@ -47,26 +48,54 @@ public class CreateStream {
     @SneakyThrows
     public void createStreams() {
 
-        var collectionsStream = List.of("one", "two", "three").stream();
-
-        var empty = Stream.empty();
-
-        var add = Stream.builder().add("one").add("two").add("three");
-
-        var stringStream = Stream.of("one", "two", "three");
-
-        var intStream = IntStream.of(1, 2, 3);
-
-        var arrayStream = Arrays.stream(new int[]{1, 2, 3});
-
-        var lineStream = Files.lines(Path.of("path"));
+        var stream1 = Stream.empty();
+        var stream2 = Stream.of("one", "two", "three");
+        var stream3 = Stream.builder().add("one").add("two").add("three");
+        var stream5 = IntStream.of(1, 2, 3);
+        var stream4 = List.of("one", "two", "three").stream();
+        var stream6 = Arrays.stream(new int[]{1, 2, 3});
+        var stream7 = Files.lines(Path.of("path"));
     }
 
     public void infinityStreams() {
+        var generate = Stream.generate(() -> new Random().nextInt(3)).limit(100);  // limit is required
+        var iterate = Stream.iterate(0, i -> i + 1).limit(100);                     // limit is required
+        var range = IntStream.range(0, 100);
+    }
 
-        var generate = Stream.generate(() -> new Random().nextInt(3));  // limit is required
+    private void intermediateOperations() {
+//        Stream.of("")
+//                .generate()
+//                .iterate()
+//                .limit(Long)
+//                .skip(Long)
+//                .filter(Predicate)
+//                .map(Function)
+//                .flatMap(Function)
+//                .sorted(Comparator)
+//                .peek(Consumer)
+//                .distinct()
 
+//        IntStream
+//                .range()
+//                .summaryStatistics()
+    }
 
-        var iterate = Stream.iterate(0, i -> i + 1);                     // limit is required
+    private void terminatedOperations() {
+//        Stream.of("")
+//                .forEach(Consumer)
+//                .forEachOrdered(Consumer)
+//                .toArray(IntFunction)
+//                .reduce(BinaryOperator)
+//                .collect(Collector/Supplier)
+//                .min(Comparator)
+//                .max(Comparator)
+//                .anyMatch(Predicate)
+//                .allMatch(Predicate)
+//                .noneMatch(Predicate)
+//                .findFirst()
+//                .findAny()
+//                .sum()
+//                .count()
     }
 }

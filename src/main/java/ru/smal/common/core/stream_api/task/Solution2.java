@@ -1,6 +1,5 @@
 package ru.smal.common.core.stream_api.task;
 
-import java.util.Arrays;
 import java.util.stream.IntStream;
 
 /**
@@ -32,7 +31,37 @@ public class Solution2 {
         return IntStream.of(nums)
                 .mapToObj(num -> num % 3 == 0
                         ? (num % 5 == 0 ? "FizzBuzz" : "Fizz")
-                        : (num % 5 == 0 ? "Buzz" : num))
+                        : (num % 5 == 0 ? "Buzz" : num)
+                )
                 .toArray();
+    }
+
+    public Object[] fizzBuzzUseStream() {
+        return IntStream
+                .range(1, 100)
+                .mapToObj(n -> n % 3 == 0
+                        ? (n % 5 == 0 ? "FizzBuzz" : "Fizz")
+                        : (n % 5 == 0 ? "Buzz" : n)
+                )
+                .toArray();
+    }
+
+    public Object[] fizzBuzzUseForLoop() {
+        Object[] result = new Object[100];
+
+        for (int n = 1; n <= 100; n++) {
+            int index = n - 1;
+            if (n % 15 == 0) {
+                result[index] = "FizzBuzz";
+            } else if (n % 3 == 0) {
+                result[index] = "Fizz";
+            } else if (n % 5 == 0) {
+                result[index] = "Buzz";
+            } else {
+                result[index] = n;
+            }
+        }
+
+        return result;
     }
 }

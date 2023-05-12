@@ -1,4 +1,4 @@
-package ru.smal.common.custom_queue;
+package ru.smal.common.custom_collection.custom_queue;
 
 import java.util.ArrayList;
 
