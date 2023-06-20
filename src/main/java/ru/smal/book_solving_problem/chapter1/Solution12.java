@@ -28,9 +28,12 @@ public class Solution12 {
     public String removeDuplicateUseStream1(String text) {
         return text.chars()
                 .distinct()
-                .collect(StringBuilder::new,
+                .collect(
+                        StringBuilder::new,
                         StringBuilder::appendCodePoint,
                         StringBuilder::append)
                 .toString();
     }
+
+
 }
