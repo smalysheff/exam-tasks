@@ -25,6 +25,8 @@ import java.util.stream.Stream;
  * skip()
  * generate()
  * iterate()
+ * range()
+ * summaryStatistics()
  * <p>
  * <p>
  * =========== Terminal Operations ===========

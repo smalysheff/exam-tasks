@@ -1,6 +1,8 @@
 package ru.smal.book_solving_problem.chapter1;
 
 import lombok.NonNull;
+import org.springframework.lang.Nullable;
+import org.springframework.util.ObjectUtils;
 
 /**
  * Проверка, содержит ли строковое значение только цифры.
@@ -33,8 +35,8 @@ public class Solution4 {
         }
     }
 
-    public boolean isDigitUseStream(@NonNull String text) {
-        if (text.isEmpty()) {
+    public boolean isDigitUseStream(@Nullable String text) {
+        if (ObjectUtils.isEmpty(text)) {
             return false;
         }
         return text.chars()
