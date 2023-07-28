@@ -1,6 +1,6 @@
 package ru.smal.gof_patterns.behavioral.iterator;
 
-public class Organization implements Collection{
+public class Organization implements Collection {
 
     private String inn;
     private String[] accounts;
@@ -31,7 +31,7 @@ public class Organization implements Collection{
         return new OrganizationIterator();
     }
 
-    private class OrganizationIterator implements Iterator{
+    private class OrganizationIterator implements Iterator {
 
         private int index;
 
