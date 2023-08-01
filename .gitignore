@@ -31,6 +31,7 @@ build/
 
 ### Other files ###
 *.pdf
+*.txx
 
 ### VS Code ###
 .vscode/

@@ -4,6 +4,7 @@ public class ClientRunner {
 
     public static void main(String[] args) {
         ConcreteSubject publisher = new ConcreteSubject("Hello World!");
+
         publisher.subscribe(new ConcreteObserverA());
         publisher.subscribe(new ConcreteObserverB());
 

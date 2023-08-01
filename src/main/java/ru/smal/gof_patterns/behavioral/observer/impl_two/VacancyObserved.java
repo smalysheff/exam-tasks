@@ -5,6 +5,9 @@ import java.util.List;
 import java.util.Set;
 import java.util.concurrent.CopyOnWriteArraySet;
 
+/**
+ * Vacancy publisher
+ */
 public class VacancyObserved implements Observed {
 
     private final Set<Observer> observers = new CopyOnWriteArraySet<>();
