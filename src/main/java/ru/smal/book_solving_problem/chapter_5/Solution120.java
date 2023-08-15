@@ -23,6 +23,3 @@ public class Solution120 {
                 .toList();
     }
 }
-
-record Melon(String type, int weight) {
-}

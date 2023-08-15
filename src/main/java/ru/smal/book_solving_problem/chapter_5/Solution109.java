@@ -2,7 +2,6 @@ package ru.smal.book_solving_problem.chapter_5;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
-import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 
 import java.util.Arrays;
@@ -43,8 +42,6 @@ public class Solution109 {
         return melons;
     }
 }
-
-
 
 @Getter
 @Setter
