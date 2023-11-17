@@ -1,4 +1,4 @@
-package ru.smal.common.core.stream_api.task;
+package ru.smal.common.core.stream_api.tasks;
 
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
@@ -30,6 +30,12 @@ class Solution2Test {
     @Test
     void fizzBuzzUseForLoopTest2() {
         Assertions.assertThat(solution.fizzBuzzUseForLoop())
+                .isEqualTo(expectedFor100());
+    }
+
+    @Test
+    void fizzBuzzUseStream() {
+        Assertions.assertThat(solution.fizzBuzzUseStream(1, 101))
                 .isEqualTo(expectedFor100());
     }
 

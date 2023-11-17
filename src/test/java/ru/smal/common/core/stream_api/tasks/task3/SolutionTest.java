@@ -1,4 +1,4 @@
-package ru.smal.common.core.stream_api.task.task3;
+package ru.smal.common.core.stream_api.tasks.task3;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;

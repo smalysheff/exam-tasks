@@ -1,4 +1,4 @@
-package ru.smal.common.core.stream_api.task;
+package ru.smal.common.core.stream_api.tasks;
 
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;

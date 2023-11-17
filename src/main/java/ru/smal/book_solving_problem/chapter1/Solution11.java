@@ -1,5 +1,7 @@
 package ru.smal.book_solving_problem.chapter1;
 
+import lombok.Data;
+
 import java.util.stream.IntStream;
 
 /**

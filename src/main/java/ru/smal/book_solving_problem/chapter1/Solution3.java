@@ -1,7 +1,10 @@
 package ru.smal.book_solving_problem.chapter1;
 
+import java.util.Collections;
+import java.util.List;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 /**
  * Инвертирование букв и слов.
@@ -52,5 +55,16 @@ public class Solution3 {
                 .map(StringBuilder::new)
                 .map(StringBuilder::reverse)
                 .collect(Collectors.joining(" "));
+    }
+
+    public static String reverseWordsV2(String source) {
+        return Stream.of(source.split("\\s+"))
+                .collect(Collectors.collectingAndThen(
+                        Collectors.toList(),
+                        words -> {
+                            Collections.reverse(words);
+                            return words.stream();
+                        }
+                )).collect(Collectors.joining(" "));
     }
 }

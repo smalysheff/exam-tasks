@@ -1,4 +1,4 @@
-package ru.smal.leetcode.medium.medium_151;
+package ru.smal.leetcode.medium.medium151;
 
 
 import java.util.ArrayList;

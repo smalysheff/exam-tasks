@@ -1,8 +1,7 @@
-package ru.smal.leetcode.medium.medium_151;
+package ru.smal.leetcode.medium.medium151;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import ru.smal.leetcode.medium.medium_151.Solution;
 
 import static org.junit.jupiter.api.Assertions.*;
 

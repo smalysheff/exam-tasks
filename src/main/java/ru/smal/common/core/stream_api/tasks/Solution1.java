@@ -1,4 +1,4 @@
-package ru.smal.common.core.stream_api.task;
+package ru.smal.common.core.stream_api.tasks;
 
 
 import java.util.stream.IntStream;

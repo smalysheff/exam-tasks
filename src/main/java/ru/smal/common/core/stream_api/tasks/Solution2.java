@@ -1,4 +1,4 @@
-package ru.smal.common.core.stream_api.task;
+package ru.smal.common.core.stream_api.tasks;
 
 import java.util.stream.IntStream;
 
@@ -36,9 +36,9 @@ public class Solution2 {
                 .toArray();
     }
 
-    public Object[] fizzBuzzUseStream() {
+    public Object[] fizzBuzzUseStream(int lowerBound, int upperBound) {
         return IntStream
-                .range(1, 100)
+                .range(lowerBound, upperBound)
                 .mapToObj(n -> n % 3 == 0
                         ? (n % 5 == 0 ? "FizzBuzz" : "Fizz")
                         : (n % 5 == 0 ? "Buzz" : n)

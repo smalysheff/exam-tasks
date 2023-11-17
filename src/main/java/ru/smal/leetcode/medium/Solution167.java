@@ -20,6 +20,9 @@ public class Solution167 {
         int right = nums.length - 1;
 
         while (nums[left] + nums[right] != target) {
+            if (left == nums.length - 1 || right == 0) {
+                return new int[]{};
+            }
             if (nums[left] + nums[right] < target) {
                 left++;
             } else {
@@ -27,5 +30,16 @@ public class Solution167 {
             }
         }
         return new int[]{left, right};
+    }
+
+    public int[] twoSumForLoop(int[] nums, int target) {
+        for (int i = 0; i < nums.length; i++) {
+            for (int j = 1; j < nums.length; j++) {
+                if (target - nums[i] == nums[j]) {
+                    return new int[]{i, j};
+                }
+            }
+        }
+        return new int[]{};
     }
 }
