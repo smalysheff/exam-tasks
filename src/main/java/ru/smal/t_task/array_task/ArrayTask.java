@@ -1,7 +1,5 @@
 package ru.smal.t_task.array_task;
 
-import java.util.List;
-import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
 public class ArrayTask {
@@ -17,18 +15,13 @@ public class ArrayTask {
     }
 
     public static int getRepeatableNumber(int[] a, int[] b, int[] c) {
-       return IntStream.of(a)
-               .filter(num -> contains(b, num) && contains(c, num))
-               .findFirst()
-               .orElse(-1);
+        return IntStream.of(a)
+                .filter(num -> contains(b, num) && contains(c, num))
+                .findFirst()
+                .orElse(-1);
     }
 
     private static boolean contains(int[] array, int num) {
         return IntStream.of(array).anyMatch(n -> n == num);
     }
 }
-
-
-// Input: [1,2,4,5], [3,3,4], [2,3,4,5,6]
-
-
