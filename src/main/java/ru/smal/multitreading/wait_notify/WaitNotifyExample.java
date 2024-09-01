@@ -1,4 +1,4 @@
-package ru.smal.multitreading.wait_notity;
+package ru.smal.multitreading.wait_notify;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -7,23 +7,28 @@ public class WaitNotifyExample {
 
     public static void main(String[] args) {
 
-        while (true);
+//        while (true);
 
-//        BlockingQueue queue = new BlockingQueue();
-//
-//        Thread worker = new Thread(() -> {
-//            while (true) {
-//                Runnable task = queue.get();
-//                task.run();
-//            }
-//        });
-//
-//        worker.start();
-//
-//        for (int i = 0; i < 10; i++) {
-//            queue.put(getTask());
-//        }
+        BlockingQueue queue = new BlockingQueue();
 
+        Thread worker = new Thread(() -> {
+            while (true) {
+                Runnable task = queue.get();
+                task.run();
+            }
+        });
+
+        worker.start();
+
+        for (int i = 0; i < 10; i++) {
+            queue.put(getTask());
+        }
+
+        try {
+            worker.join();
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     private static Runnable getTask() {
@@ -43,7 +48,7 @@ class BlockingQueue {
 
     private final List<Runnable> tasks;
 
-    BlockingQueue() {
+    public BlockingQueue() {
         this.tasks = new ArrayList<>();
     }
 
