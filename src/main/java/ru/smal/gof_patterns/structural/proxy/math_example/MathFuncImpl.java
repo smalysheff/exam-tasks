@@ -1,6 +1,7 @@
 package ru.smal.gof_patterns.structural.proxy.math_example;
 
 public class MathFuncImpl implements MathFunc {
+
     @Override
     public int add(int a, int b) {
         return a + b;
